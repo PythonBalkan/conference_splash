@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PyCon Balkan 2018</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<figure>
+    <video autoplay muted loop id="myVideo" class="background">
+        <source src="images/pycon-bg-loop.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <div class="overlay-bg"></div>
+</figure>
+    
+    
+<section>
+    
+    <div class="container">
+        <div class="row">
+            <a href="https://pyconbalkan.com" target="_blank" class="logo"></a>
+        
+            <div class="column">
+                <h1>Welcome to</br>PyCon Balkan 2019!</h1>
+                <h2>Belgrade, Serbia.</h2>
+                <h3>Hilton Hotel</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row timer">
+        <div class="column container">
+            <h1>Help Us find new speakers!</h1>
+            <ul id="timer">
+                <li><p id="days"></p><span>days</span></li>
+                <li><p id="hours"></p><span>hours</span></li>
+                <li><p id="minutes"></p><span>minutes</span></li>
+                <li><p id="seconds"></p><span>seconds</span></li>
+            </ul>
+            <a href="​https://docs.google.com/forms/d/11cQYiuWfGT_0UOobZxyU5RHhmbDC_LXkLJlZ1NocYgM/edit" target="_blank" class="cta_button">Take A Survey</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <ul class="info">
+                <li>
+                    <img src="images/icon-help.svg" alt="">
+                    <p>Help us build next edition and contribute to the development of the Python Community by choosing better content for PyCon Balkan 2019.</p>
+                </li>
+                
+                <li>
+                    <img src="images/icon-ticket.svg" alt="">
+                    <p>Everyone who is willing to help us and fills the form out will have the opportunity to win a free ticket for PyCon Balkan 2019 on our New Year's eve drawing!</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <a href="https://www.facebook.com/pyconblkn/" target="_blank" class="facebook"></a>
+        <a href="https://www.instagram.com/pycon.blkn/" target="_blank" class="instagram"></a>
+        <a href="https://twitter.com/PyConBlkn" target="_blank" class="twitter"></a>
+        <a href="mailto:info@pyconbalkan.com" target="_blank" class="email"></a>
+    </footer>
+</section>
+
+
+
+    <script>
+        var deadline = new Date("dec 31, 2018 12:00:00").getTime(); 
+
+        var x = setInterval(function() {
+
+        var now = new Date().getTime(); 
+        var t = deadline - now; 
+        var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+        var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+        var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+        document.getElementById("days").innerHTML =days ; 
+        document.getElementById("hours").innerHTML =hours; 
+        document.getElementById("minutes").innerHTML = minutes; 
+        document.getElementById("seconds").innerHTML =seconds; 
+        if (t < 0) { 
+                clearInterval(x); 
+                document.getElementById("demo").innerHTML = "TIME UP"; 
+                document.getElementById("days").innerHTML ='0'; 
+                document.getElementById("hours").innerHTML ='0'; 
+                document.getElementById("minutes").innerHTML ='0' ; 
+                document.getElementById("seconds").innerHTML = '0'; } 
+        }, 1000); 
+    </script>
+</body>
+</html>

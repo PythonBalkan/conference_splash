@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PyCon Balkan 2018</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<figure>
+    <video autoplay muted loop id="myVideo" class="background">
+        <source src="images/pycon-bg-loop.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <div class="overlay-bg"></div>
+</figure>
+    
+    
+<section>
+    
+    <div class="container">
+        <div class="column">
+            <a href="https://pyconbalkan.com" target="_blank" class="logo"></a>
+        
+            <div class="column">
+                <h1>Welcome to PyCon Balkan!</h1>
+                <p>PyCon Balkan is an annual event that is being held in various countries in the Balkan region since 2018.</p>
+                <p>Key aim of PyCon Balkan is to connect the region and provide a real-time meeting opportunity for developers and companies from this region and internationally.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <h1>#2</h1>
+            <h2>PyCon Balkan 2019</h2>
+            <h3>Oct. 3, 2019 - Oct. 5, 2019</h3>
+            <p>​Hilton hotel, Belgrade, Serbia</p>
+        </div>
+        <div class="column">
+            <h1>#3</h1>
+            <h2>PyCon Balkan 2020</h2>
+            <p>​Split, Croatia</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <p>PyCon Balkan gratefully acknowledges the support of our sponsors, without which the conference could not go ahead.</p>
+            <p>For PyCon Balkan 2019 we are still in the process of creating a nice brochure. Until that’s available, if you are interested in sponsoring PyCon Balkan 2019, please contact us and we will provide you with all the information you need.</p>
+
+            <a href="mailto:sponsor@pyconbalkan.com" target="_blank" class="cta_button">Sponsor</a>
+        </div>
+    </div>
+    
+    <footer>
+        <a href="https://www.facebook.com/pyconblkn/" target="_blank" class="facebook"></a>
+        <a href="https://www.instagram.com/pycon.blkn/" target="_blank" class="instagram"></a>
+        <a href="https://twitter.com/PyConBlkn" target="_blank" class="twitter"></a>
+        <a href="mailto:info@pyconbalkan.com" target="_blank" class="email"></a>
+    </footer>
+</section>
+
+
+
+    <script>
+        var deadline = new Date("dec 31, 2018 12:00:00").getTime(); 
+
+        var x = setInterval(function() {
+
+        var now = new Date().getTime(); 
+        var t = deadline - now; 
+        var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+        var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+        var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+        document.getElementById("days").innerHTML =days ; 
+        document.getElementById("hours").innerHTML =hours; 
+        document.getElementById("minutes").innerHTML = minutes; 
+        document.getElementById("seconds").innerHTML =seconds; 
+        if (t < 0) { 
+                clearInterval(x); 
+                document.getElementById("demo").innerHTML = "TIME UP"; 
+                document.getElementById("days").innerHTML ='0'; 
+                document.getElementById("hours").innerHTML ='0'; 
+                document.getElementById("minutes").innerHTML ='0' ; 
+                document.getElementById("seconds").innerHTML = '0'; } 
+        }, 1000); 
+    </script>
+</body>
+</html>

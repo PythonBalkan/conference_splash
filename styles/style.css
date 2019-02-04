@@ -237,35 +237,28 @@ section {
       section footer a.email {
         background: url(../images/email.svg); }
 
- /* Three image containers (use 25% for four, and 50% for two, etc) */
 .row-logo {
-  justify-content: center; /* align horizontal */
-  height: 50px;
-  display:flex;
+  justify-content: center;
+  /* align horizontal */
+  min-height: 50px;
+  display: flex;
   padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, .25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   width: 1000px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+  @media only screen and (max-width: 1023px) {
+    .row-logo {
+      width: 100%; } }
 
-@media only screen and (max-width: 1023px) {
-  .row-logo {
-    width: 100%;
-  }
-}
+.row-logo .link-logo:nth-of-type(1) {
+  background: url(../images/django-logo.svg) no-repeat center center; }
+.row-logo .link-logo:nth-of-type(2) {
+  background: url(../images/python-logo.svg) no-repeat center center; }
 
-.row-logo img{
+.link-logo {
+  background-size: contain;
+  width: 200px;
   height: 50px;
-}
-
-.row-logo img:first-of-type {
-  margin-right: 30px;
-}
-
-img {
-    max-width:100%;
-    max-height:100%;
-}
-
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

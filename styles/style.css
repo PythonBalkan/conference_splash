@@ -237,19 +237,6 @@ section {
       section footer a.email {
         background: url(../images/email.svg); }
 
-
-.proba {
-    background-color: rgba(255, 255, 255, 0.25);
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: center;
-    align-self: center;
-    height: 1px;
-    border: 0 none;
-}
-
  /* Three image containers (use 25% for four, and 50% for two, etc) */
 .row-logo {
   justify-content: center; /* align horizontal */

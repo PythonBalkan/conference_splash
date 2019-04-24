@@ -149,7 +149,14 @@ img.labnol {
 }
 
 /*---BUTTON---*/
+
+.buttonWrapper {
+    width: 100%;
+    display: flex;
+}
+
 .button {
+    flex: 1 1 50%;
     display: block;
     padding: 20px 40px;
     margin: 20px 0;
@@ -163,9 +170,35 @@ img.labnol {
     border-radius: 4px;
 }
 
+.button:first-of-type {
+    margin-right: 20px;
+}
+
+.button:last-of-type {
+    background-color: transparent;
+    color: #343C3E;
+    border: 1px solid #343C3E;
+}
+
 .button:hover {
     background-color: #F3D66C;
     color: #343C3E;
+}
+
+.button:last-of-type:hover {
+    background-color: #343C3E;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .buttonWrapper {
+        display: block;
+    }
+
+    .button {
+        flex: 1 0 100% !important;
+        margin: 0 0 20px 0 !important;
+    }
 }
 
 /*---TITLES---*/
